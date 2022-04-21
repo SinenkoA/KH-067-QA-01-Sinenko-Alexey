@@ -11,5 +11,5 @@ public class FirstClass {
         System.out.print(username + " " + addres);
 
     }
-    
+
 }
