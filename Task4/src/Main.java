@@ -7,14 +7,13 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter at least three words ");
         String a = scan.nextLine();
-        String[] array = a.split(", ");
+        String[] words = a.split(", ");
 
-        for (int i = 0; i < array.length; i++) {
+        if (words.length >= 3) {
 
-            int e = 1;
+            int end = 1;
 
-            while (e == 1) {
-                System.out.println(array[i]);
+            while (end == 1) {
                 System.out.println("select a filter:");
                 System.out.println("1-maximum lenght");
                 System.out.println("2-start with");
@@ -26,46 +25,48 @@ public class Main {
 
                 switch (val) {
                     case 1:
-                        System.out.println("Enter maximum length? ");
+                        System.out.println("Enter length of word");
                         int lenght = scan.nextInt();
-
-                        for (; i < array.length; i++) {
-
+                        for (String word : words) {
+                            if (word.length() <= lenght) {
+                                System.out.printf("Word" + ": " + word + "\n");
+                            }
                         }
-                        System.out.println(array[lenght]);
                         break;
                     case 2:
-
                         System.out.println("Enter first letter? ");
-                        String first = scan.nextLine();
-                        System.out.println(first);
-
+                        String first = scan.next();
+                        for (String word : words) {
+                            if (word.startsWith(first)) {
+                                System.out.printf("Word" + ": " + word + "\n");
+                            }
+                        }
                         break;
                     case 3:
-
                         System.out.println("Enter last letter? ");
-                        String last = scan.nextLine();
-                        System.out.println(last);
+                        String last = scan.next();
+                        for (String word : words) {
+                            if (word.endsWith(last)) {
+                                System.out.printf("Word" + ": " + word + "\n");
+                            }
+                        }
 
                         break;
                     case 4:
-
                         System.out.println("Enter part words? ");
-                        String part = scan.nextLine();
-                        System.out.println(part);
-
+                        String part = scan.next();
+                        for (String word : words) {
+                            if (word.contains(part)) {
+                                System.out.printf("Word" + ": " + word + "\n");
+                            }
+                        }
                         break;
                     case 0:
-
                         System.out.println("0");
-                        e = 0;
+                        end = 0;
                         break;
                 }
-
             }
-
         }
-
     }
-
 }
