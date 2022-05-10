@@ -17,7 +17,7 @@ public class Eagle extends Bird implements BirdFamily {
 
     //method move
     @Override
-    public void move() {
+    public void Move() {
         System.out.println(name + " move");
     }
 

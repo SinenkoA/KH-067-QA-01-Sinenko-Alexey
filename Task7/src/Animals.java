@@ -36,6 +36,6 @@ public abstract class Animals {
         this.weigh = weigh;
     }
 
-    //method move
-    public abstract void move();
+    //method Move
+    public abstract void Move();
 }

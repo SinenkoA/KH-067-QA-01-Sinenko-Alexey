@@ -13,13 +13,13 @@ public abstract class Mammals extends Animals {
         return eat;
     }
 
-    //method eating
-    public void eating(String name) {
+    //method Eating
+    public void Eating(String name) {
         System.out.println(name + "eating");
     }
 
-    //method move
-    public abstract void move();
+    //method Move
+    public abstract void Move();
 
     //constructor
     public Mammals(String name, int age, int waigh, String environment, String eat) {

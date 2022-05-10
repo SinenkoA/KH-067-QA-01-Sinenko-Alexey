@@ -37,9 +37,9 @@ public class Lion extends Mammals implements CatFamily {
         super(name, weigh, age, environment, eat);
     }
 
-    // method move
+    // method Move
     @Override
-    public void move() {
+    public void Move() {
         System.out.println(name + " move");
     }
 
