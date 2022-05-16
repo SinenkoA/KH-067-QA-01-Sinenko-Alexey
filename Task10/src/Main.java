@@ -12,17 +12,17 @@ public class Main {
 
         //getOperation
         boolean askOperation = true;
+        String operation = "";
         while (askOperation) {
             try {
                 System.out.print(" input operation +,-,*,/,%. ");
-                String operation = scan.nextLine();
+                operation = scan.nextLine();
                 getOperation(operation);
                 askOperation = false;
-            } catch (NotSupportedOperationException operation) {
+            } catch (NotSupportedOperationException e) {
                 System.out.println("Invalid operation");
             }
         }
-
         // getValue2
         double value2 = getValue();
 
